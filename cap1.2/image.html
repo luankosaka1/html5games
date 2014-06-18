@@ -1,0 +1,24 @@
+<html>
+	<head></head>
+
+	<body>
+
+		<canvas id="nome_canvas" width="300" height="300">
+			Seu navegador não suporta o Canvas do HTML5.
+			<br />
+			Procure atualizá-lo.
+		</canvas>
+
+		<script>
+		var canvas = document.getElementById('nome_canvas');
+		var context = canvas.getContext('2d');
+
+		var imagem = new Image();
+		imagem.src = 'personagem.jpg';
+		imagem.onload = function() {
+			context.drawImage(imagem, 20, 20, 183, 265);
+		}
+		</script>
+
+	</body>
+</html>

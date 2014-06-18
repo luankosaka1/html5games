@@ -1,0 +1,30 @@
+<html>
+	<head></head>
+
+	<body>
+
+		<canvas id="nome_canvas" width="150" height="300" style="border: 1px solid black">
+			Seu navegador não suporta o Canvas do HTML5.
+			<br />
+			Procure atualizá-lo.
+		</canvas>
+
+		<script>
+		var canvas = document.getElementById('nome_canvas');
+		var context = canvas.getContext('2d');
+
+		var imagem = new Image();
+		imagem.src = 'personagem-eventos.jpg';
+		imagem.onload = function() {
+			context.drawImage(
+				imagem, 
+				// xOrigem, yOrigem, larguraOrigem, alturaOrigem
+				150, 40, 591, 358, // area do recorte
+				// xDestino, yDestino, larguraDestino, alturaDestino
+				0, 0, 591, 358 // desenho do canvas
+			);
+		}
+		</script>
+
+	</body>
+</html>
